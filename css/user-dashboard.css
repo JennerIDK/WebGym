@@ -1,0 +1,131 @@
+/* === Reset básico === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 220px;
+  background-color: #343a40;
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #495057;
+}
+
+/* === Contenido principal === */
+.col-md-10 {
+  margin-left: 240px; /* Sidebar width + espacio extra */
+  padding: 20px;
+}
+
+/* === Cards === */
+.card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 1.8rem;
+}
+
+.card h5 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* === Botones === */
+.btn {
+  border-radius: 5px;
+}
+
+/* === Slider === */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.8s ease-in-out;
+  text-align: center;
+  padding: 15px;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.exit-left {
+  transform: translateX(-100%);
+}
+
+/* === Tickets === */
+#ticket-container p {
+  margin: 10px 0;
+  background: #e9ecef;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .col-md-10 {
+    margin-left: 0;
+  }
+}

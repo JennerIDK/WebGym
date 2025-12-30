@@ -1,0 +1,21 @@
+/* Estilos específicos para las tarjetas de clases */
+#clasesContainer .card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#clasesContainer .card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+#clasesContainer .card-body h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#clasesContainer .card-body p {
+    margin: 5px 0;
+    color: #555;
+}
